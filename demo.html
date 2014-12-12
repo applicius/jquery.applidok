@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Applidok - Form with jQuery</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap for demo -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />    
+  </head>
+  <body>
+    <div class="container">
+      <h1>Form with jQuery</h1>
+
+      <p class="lead">This sample show how to <strong>merge form values with a PDF</strong> template using jQuery plugin for <a href="https://go.applidok.com">Applidok</a>.</p>
+
+      <p>It demonstrates how to do some Javascript validation (there alert if first name is empty), before merging to PDF.</p>
+
+      <p>
+        <strong>You can freely copy & paste source code of this page.</strong>
+      </p>
+
+      <p>You can use <a href="http://kompozer.net/download.php" rel="friend">Mozilla Kompozer</a> to ease Web authoring.</p>
+
+      <form action="#applidok" role="form" method="POST">
+        <div class="form-group">
+          <label for="firstName" class="control-label">First name</label>
+          <input type="text" class="form-control"
+                 name="firstName" id="firstName"  />
+        </div><!-- /.form-group -->
+
+        <div class="form-group">
+          <label for="lastName" class="control-label">
+            Last name</label>
+          <input type="text" class="form-control"
+                 name="lastName" id="lastName" />
+        </div><!-- /.form-group -->
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="case" value="yes" /> Activated?</label>
+        </div><!-- /.form-group -->
+        
+        <button class="btn btn-primary">Merge to PDF</button>
+      </form>
+    </div><!-- /.container -->
+    
+    <!-- Required -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
+    <!-- Only for this demo -->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <script src="i18n/jquery.applidok-en.min.js"></script>
+    <script src="js/jquery.applidok.min.js"></script>
+    <!-- Or use jQuery bundle hosted by Applidok
+    <script src="//go.applidok.com/en/js/merge-bundle.gz.js"></script>
+    -->
+
+    <!-- There come validation + merge call -->
+    <script type="text/javascript">
+      $('form[action="#applidok"]'). // for each form having #applidok action
+      submit(function() {
+        if ($.trim($('input[name="firstName"]').val()) == "") {
+          // if input whose name is firstName is empty
+          alert("Empty first name");
+
+          return false; // Skip
+        }
+
+        //  ... else we merge to PDF
+        var form = $(this); // Current form
+
+        $.applidok({
+          'action': "merge",
+          'applidok_token': "a610e9b1048499110433bb790489303a07182aac",
+          'applidok_template':"ca62e08d-2082-4cd4-837c-d46a362091e3",
+          'form_target': "_blank", // optional: option in new window or tab
+          'data': form // Post all form values
+        });
+
+        return false // nothing more to open
+      });
+    </script>
+  </body>
+</html>

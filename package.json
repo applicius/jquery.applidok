@@ -1,0 +1,40 @@
+{
+  "name": "jquery.applidok",
+  "version": "1.0.1",
+  "description": "Provides jQuery integration for PDF templating using Applidok service.",
+  "main": "js/jquery.applidok.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/applicius/jquery.applidok.git"
+  },
+  "files": [
+    "js/jquery.applidok.min.js",
+    "i18n/jquery.applidok-en.min.js",
+    "i18n/jquery.applidok-en.min.js",
+    "i18n/jquery.applidok-fr.min.js"
+  ],
+  "dependencies": {
+    "jquery": ">=1.11.0"
+  },
+  "keywords": [
+    "applidok",
+    "pdf",
+    "template",
+    "merge",
+  ],
+  "author": {
+      "name": "Applicius",
+      "url": "http://www.applicius.fr"
+  },
+  "contributors": [
+    { "name": "cchantep", "url": "https://github.com/cchantep" }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/applicius/jquery.applidok/issues"
+  },
+  "homepage": "https://github.com/applicius/jquery.applidok"
+}
