@@ -15,11 +15,11 @@ $.applidok({
 });
 ```
 
-You want to see this plugin in action: [demo](http://rawgit.com/applicius/jquery.applidok/master/demo.html).
+You want to see this plugin in action: [demo](http://rawgit.com/cchantep/jquery.applidok/master/demo.html).
 
 ## Get started
 
-You can download plugin files from the source repository: [js/](https://github.com/applicius/jquery.applidok/tree/master/js) and [i18n/](https://github.com/applicius/jquery.applidok/tree/master/js) sub-directories.
+You can download plugin files from the source repository: [js/](https://github.com/cchantep/jquery.applidok/tree/master/js) and [i18n/](https://github.com/cchantep/jquery.applidok/tree/master/js) sub-directories.
 
 This plugin is also available as a [NPM package](https://www.npmjs.com/package/jquery.applidok): `npm install jquery.applidok`
 
