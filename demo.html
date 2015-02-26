@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Applidok - Form with jQuery</title>
+    <title>Fudok - Form with jQuery</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap for demo -->
@@ -11,7 +11,7 @@
     <div class="container">
       <h1>Form with jQuery</h1>
 
-      <p class="lead">This sample show how to <strong>merge form values with a PDF</strong> template using jQuery plugin for <a href="https://go.applidok.com">Applidok</a>.</p>
+      <p class="lead">This sample show how to <strong>merge form values with a PDF</strong> template using jQuery plugin for <a href="https://go.fudok.com">Fudok</a>.</p>
 
       <p>It demonstrates how to do some Javascript validation (there alert if first name is empty), before merging to PDF.</p>
 
@@ -21,7 +21,7 @@
 
       <p>You can use <a href="http://kompozer.net/download.php" rel="friend">Mozilla Kompozer</a> to ease Web authoring.</p>
 
-      <form action="#applidok" role="form" method="POST">
+      <form action="#fudok" role="form" method="POST">
         <div class="form-group">
           <label for="firstName" class="control-label">First name</label>
           <input type="text" class="form-control"
@@ -50,15 +50,15 @@
     <!-- Only for this demo -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    <script src="i18n/jquery.applidok-en.min.js"></script>
-    <script src="js/jquery.applidok.min.js"></script>
-    <!-- Or use jQuery bundle hosted by Applidok
-    <script src="//go.applidok.com/en/js/merge-bundle.gz.js"></script>
+    <script src="i18n/jquery.fudok-en.min.js"></script>
+    <script src="js/jquery.fudok.min.js"></script>
+    <!-- Or use jQuery bundle hosted by Fudok
+    <script src="//go.fudok.com/en/js/merge-bundle.gz.js"></script>
     -->
 
     <!-- There come validation + merge call -->
     <script type="text/javascript">
-      $('form[action="#applidok"]'). // for each form having #applidok action
+      $('form[action="#fudok"]'). // for each form having #fudok action
       submit(function() {
         if ($.trim($('input[name="firstName"]').val()) == "") {
           // if input whose name is firstName is empty
@@ -70,10 +70,10 @@
         //  ... else we merge to PDF
         var form = $(this); // Current form
 
-        $.applidok({
+        $.fudok({
           'action': "merge",
-          'applidok_token': "a610e9b1048499110433bb790489303a07182aac",
-          'applidok_template':"ca62e08d-2082-4cd4-837c-d46a362091e3",
+          'fudok_token': "a610e9b1048499110433bb790489303a07182aac",
+          'fudok_template':"ca62e08d-2082-4cd4-837c-d46a362091e3",
           'form_target': "_blank", // optional: option in new window or tab
           'data': form // Post all form values
         });

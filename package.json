@@ -1,26 +1,26 @@
 {
-  "name": "jquery.applidok",
-  "version": "1.0.2",
-  "description": "Provides jQuery integration for PDF templating using Applidok service.",
-  "main": "js/jquery.applidok.min.js",
+  "name": "jquery.fudok",
+  "version": "1.0.0",
+  "description": "Provides jQuery integration for PDF templating using Fudok service.",
+  "main": "js/jquery.fudok.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cchantep/jquery.applidok.git"
+    "url": "https://github.com/cchantep/jquery.fudok.git"
   },
   "files": [
-    "js/jquery.applidok.min.js",
-    "i18n/jquery.applidok-en.min.js",
-    "i18n/jquery.applidok-en.min.js",
-    "i18n/jquery.applidok-fr.min.js"
+    "js/jquery.fudok.min.js",
+    "i18n/jquery.fudok-en.min.js",
+    "i18n/jquery.fudok-en.min.js",
+    "i18n/jquery.fudok-fr.min.js"
   ],
   "dependencies": {
     "jquery": ">=1.11.0"
   },
   "keywords": [
-    "applidok",
+    "fudok",
     "pdf",
     "template",
     "merge"
@@ -34,7 +34,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cchantep/jquery.applidok/issues"
+    "url": "https://github.com/cchantep/jquery.fudok/issues"
   },
-  "homepage": "https://github.com/cchantep/jquery.applidok"
+  "homepage": "https://github.com/cchantep/jquery.fudok"
 }

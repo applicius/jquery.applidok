@@ -3,11 +3,11 @@
 
     var proto = (self.location.href.toLowerCase().indexOf("https://") == 0)
         ? "https:" : "http:",
-    mergeUrl = proto + "//go.applidok.com/api/merge",
+    mergeUrl = proto + "//go.fudok.com/api/merge",
     merge = function(arg) {
-        if ((typeof arg['applidok_token']) != "string") window.alert(_mergeI18N['NoApplicationToken']);
+        if ((typeof arg['fudok_token']) != "string") window.alert(_mergeI18N['NoApplicationToken']);
         
-        if ((typeof arg['applidok_template']) != "string") window.alert(_mergeI18N['NoTemplateId']);
+        if ((typeof arg['fudok_template']) != "string") window.alert(_mergeI18N['NoTemplateId']);
         
         var data = function() {
             if ((typeof arg['data']) == "object" 
@@ -30,7 +30,7 @@
 
                 return r
             }
-        }, f = $('<form action="'+mergeUrl+'" method="POST"><input type="hidden" name="applidok_token" value="'+arg.applidok_token+'" /><input type="hidden" name="applidok_template" value="'+arg.applidok_template+'" /></form>');
+        }, f = $('<form action="'+mergeUrl+'" method="POST"><input type="hidden" name="fudok_token" value="'+arg.fudok_token+'" /><input type="hidden" name="fudok_template" value="'+arg.fudok_template+'" /></form>');
 
         if ((typeof arg['form_target']) == "string") 
             f.attr("target", arg.form_target);
@@ -42,7 +42,7 @@
         f.appendTo("body").trigger('submit').remove()
     };    
     
-    $.applidok = function(arg) {
+    $.fudok = function(arg) {
         if (arg && arg['action'] == "merge") return merge(arg);
         return false
     }
